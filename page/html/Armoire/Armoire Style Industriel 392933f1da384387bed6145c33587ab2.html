@@ -1,0 +1,704 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Armoire Style Industriel</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="392933f1-da38-4387-bed6-145c33587ab2" class="page sans"><header><h1 class="page-title">Armoire Style Industriel</h1></header><div class="page-body"><p id="0335fd78-c4ba-4d35-96af-1cc9531f1914" class="">Voici la page de présentation pour mon projet de rénovation d’une armoire d’occasion.</p><h2 id="7762aaa0-3f80-40ee-806b-9670401f45f1" class="">Organisation du projet</h2><p id="bd1f416e-4a05-4775-bddf-f2d856a50d4c" class="">Aimant le bricolage et la restauration de meubles d’occasion, ce projet est né d’une idée que j’ai eue à l’automne 2021. J’ai eu l’idée de réaliser un projet qui aurait pour but de récupérer un meuble ancien, et de concevoir toutes les étapes de sa transformation afin de lui donner un style industriel.</p><p id="f16c10f0-f7dc-4651-843e-c3d89b710774" class="">
+</p><p id="b47ea1de-be2b-43f7-92e2-603cc2024988" class="">Le but de ce projet était d’obtenir un meuble qui s’inspirait du style ci-dessous :</p><p id="45b2f586-f83d-4aa1-8357-4cc585e122aa" class="">
+</p><figure id="33b0c384-b7e6-4266-b2ed-12065da16cd1" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/Untitled.png"><img style="width:288px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/Untitled.png"/></a></figure><p id="0bba4d68-50d9-41fb-b5fd-c68086b3a8e8" class="">Je voulais obtenir un résultat qui reprenait l’idée des renforts en métal noir style industriel, en y ajoutant un effet bois brûlé, à partir de matériaux comme des baguettes de bois de pin. Cet effet me permettait de faire ressortir les rainures du bois tout en le protégeant de l’humidité.</p><p id="fb6222ba-dfab-47c4-9182-ec74c5a6afa4" class="">
+</p><p id="e4ad9934-7ebe-4144-a9d1-5b6006b8cefe" class="">En premier lieu, j’ai déterminé le type de meuble sur lequel je voulais travailler, aimant la collection de figurines je me suis tourné vers une armoire vitrée dans le but d’y placer ma collection par la suite. Ensuite, j’ai listé les matériaux et les outils qui me seraient utiles par la suite, comme par exemple des morceaux de métal, des planches, un poste à souder, une meuleuse, des serres-joints, de la colle à bois ou encore de la peinture.</p><p id="140dbbac-756a-4bd2-9625-3b8d0b554760" class="">
+</p><p id="91912727-4dfb-43fb-b041-4a3b7309a85d" class="">Par la suite, j’ai pu trouver l’armoire vitrée via des sites de ventes d’objets d’occasion, puis j’ai récupéré les autres matériaux nécessaires : des morceaux de métal pour le cadre, uniquement en matériaux de seconde main / d’occasion. Trouver des matériaux d’occasion était l’une des seules contraintes que je me suis imposé durant ce projet. En effet, au travers de ce projet je voulais également montrer qu’il était possible de redonner une seconde vie à tout un tas d’objets du quotidien.</p><p id="b7aab4f5-5ac7-44cd-a63a-7edd6f98a3a8" class="">
+</p><p id="b64b95cc-07f1-4bb2-82b2-d9a6d9411e94" class="">Après avoir terminé la partie organisationnelle du projet, j’ai commencé à anticiper la rénovation en elle-même par la réalisation de plans techniques. J’ai réalisé une maquette en papier, pris les mesures sur l’armoire vitrée, puis conçu un plan à partir de ces mesures. J’ai ensuite pu passer à la réalisation du projet en lui-même, avec la rénovation que j’ai effectuée en différentes étapes, détaillées plus précisément dans la seconde partie. </p><p id="f19e0b0a-8c11-44fa-8b22-27e3b8226aaa" class="">Quelques documents techniques : </p><div id="ed9a4e39-c418-49d9-91f9-4788b7067ff4" class="column-list"><div id="4d23e5e9-ebcc-4570-9e5d-0546acc96a30" style="width:93.75%" class="column"><figure id="76f549c6-d8a1-4c8e-a61f-b18ca8e8eedb" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/20211016_133414.jpg"><img style="width:336px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/20211016_133414.jpg"/></a><figcaption>Choix du placement et du découpage des poteaux pour l’assemblage sous la forme d’une maquette</figcaption></figure><figure id="d830be04-017f-49bc-a7d3-be85bfe8bde8" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20210923_144956.jpg"><img style="width:336px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20210923_144956.jpg"/></a><figcaption>Plan pour les dimensions des différentes arrêtes de l’armoire, une couleur est égale à une dimension</figcaption></figure><h2 id="4b370e30-3506-46cd-b876-3a11ea269e10" class="">Réalisation du projet</h2><p id="b42fae32-408f-49a2-80d1-e7f635630820" class="">Pour suivre la réalisation du projet, je vous invite ensuite à suivre le descriptif des différentes étapes disponibles dans les onglets ci-dessous.</p><p id="364bec0e-8c4b-4175-83b9-f00e3ecb327c" class="">
+</p><ul id="fd0771dc-a619-4271-bba6-937ac2c42b4b" class="toggle"><li><details open=""><summary>Habillage en pin</summary><p id="c3c4813d-9d5e-48d8-ae19-3814624bb8ab" class="">Pour la première étape, j’ai choisi de commencer par réaliser l’habillage en pin brûlé avant de réaliser le cadre. En effet, inverser ces deux étapes m’aurait probablement engendré des erreurs plus importantes dans les calculs d’épaisseur du bois pour la fixation du cadre, ce qui aurait ensuite donné un décalage de plusieurs centimètres. En faisant ce choix, j’ai limité les erreurs et j’ai été confronté par la suite à ce même problème mais pour un décalage bien moindre (1 cm).</p><p id="9abfa2ed-f00f-44e1-8c98-b28a5dbc41d4" class="">
+</p><p id="0602efa7-dfc3-49d9-a0f7-e03a9afa9295" class="">Voici l’armoire et les matériaux utilisés :</p><p id="da38da03-aec5-4698-aa12-2ec5f03b948d" class="">
+</p><figure id="214c8b28-edb9-44e0-8efa-c9ab985957d2" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20210923_150414.jpg"><img style="width:384px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20210923_150414.jpg"/></a></figure><p id="cfa4125b-e66f-46ac-b6c4-e8faae8dd67d" class="">
+</p><p id="c3b42b6e-61e1-46de-a864-2800dbe085f5" class="">J’ai d’abord commencé par tailler sur un angle de 45° pour faire un angle à 90° avec les deux morceaux de bois.</p><p id="c3f27e6a-44bb-415b-a642-553eed827fb5" class="">
+</p><figure id="c5395b38-defb-4142-8bc0-782088e01474" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/20211016_134506.jpg"><img style="width:336px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/20211016_134506.jpg"/></a></figure><p id="7426d601-5151-40c1-af88-3cc0bafa4860" class="">
+</p><p id="f56ba2ea-462f-41ca-a784-6b2fd53652dc" class="">J’ai brûlé les différents morceaux de bois au niveau de la surface, j’ai commencé par ceux de la vitrine que j’ai dû brûler à part pour éviter de faire éclater la vitre de l’armoire vitrée. Les autres morceaux se plaçant sur le haut ou sur les côtés ont pu, quant à eux, être brulés en étant déjà placé sur l’armoire.</p><p id="8f73afc1-b68a-494c-a936-b11de4426207" class="">
+</p><figure id="a41e816a-75d1-4fc8-b562-ad2031e8fd61" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/Untitled%201.png"><img style="width:528px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/Untitled%201.png"/></a><figcaption>Cette image contient les morceaux de bois utilisés pour le cadre de la porte.</figcaption></figure><p id="ed88638f-88ab-423d-a18b-13c12c00c8f2" class="">Ensuite j’ai positionné les morceaux brûlés au niveau de la vitrine.</p><p id="d2d961f7-297a-479e-bef4-bb8cfe8ac2b8" class="">
+</p><figure id="cd86be6d-afac-474a-81c5-977be0c0f3ce" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/20211016_125646.jpg"><img style="width:384px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/20211016_125646.jpg"/></a></figure><p id="b7478f8f-df4e-46c6-a9d7-39bd549623f5" class="">
+</p><p id="1435e140-6369-4a32-9533-fa00756c75fa" class="">Puis j’ai continué en collant les autres planches sur le dessus et sur les côtés de l’armoire, que j’ai ensuite directement brûlées sur celle-ci. J’ai obtenu le résultat suivant : </p><p id="8a544cbe-ba6a-4845-857b-eda8ad689ffb" class="">
+</p><figure id="9611ed0d-525a-4c43-b640-0059fa51ccd3" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20210925_105244.jpg"><img style="width:432px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20210925_105244.jpg"/></a></figure><p id="19ad43dd-4205-40fc-a5b5-06199aad089b" class="">
+</p><p id="f93e65cb-34d8-49f0-ab4e-eec656a30f2e" class="">Cette étape du projet ne m’a pas vraiment posé de grands soucis, le bois est plus simple à travailler que le métal.</p></details></li></ul><ul id="0e56108e-4b38-49c7-b437-4fe8e7f1df3f" class="toggle"><li><details open=""><summary>Cadre en Métal</summary><p id="0c3deba4-27c6-4f95-b01b-2aeeed634c85" class="">Tout d’abord, j’ai dû me procurer du métal aux bonnes dimensions.</p><p id="943b1c36-0e35-4ded-a419-d67da0fb13b2" class="">Je suis donc parti sur des poteaux que j’avais chez moi, inutilisés depuis des années, en forme de L. Ils étaient parfaits pour le projet puisqu’ils avaient une grande hauteur. </p><p id="9f2718e4-1b1b-4815-85ee-820d59e86293" class="">Voici les matériaux de base :</p><figure id="140e1ebf-4534-4285-a253-f2b21216f8c4" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/1675367220306.jpg"><img style="width:336px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/1675367220306.jpg"/></a></figure><p id="68757c1b-f8cd-44b6-a8ba-a7d09a62c8f6" class="">Il a donc fallu, selon le plan, les découper avec un angle de 45°.</p><p id="2613aacc-046e-4f00-b0a0-f1cb82d57705" class="">
+Comme je les ai peints en noir, j’ai dû faire les démarcations des mesures à l’aide d’une craie blanche ;</p><p id="48202626-b85e-40cb-9e74-2fb2aaa83595" class="">
+</p><p id="465036b9-c0bd-4ec1-a8aa-198ecb146ced" class="">
+</p><figure id="cff95718-4c55-4771-8edc-7ba3e83e6dfc" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/Untitled%202.png"><img style="width:336px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/Untitled%202.png"/></a></figure><p id="6558a769-674f-460c-8995-c04670bf0147" class="">
+</p><p id="d7005cdb-bdc8-4f7d-9438-dc5da9ccec28" class="">À ce moment-là j’ai rencontré un problème, je n’avais pas pris en compte les bonnes dimensions lors de ce découpage, je me suis donc retrouvé avec le bout des angles qui arrivait aux extrémités de l’armoire, j’ai donc rattrapé mon erreur en découpant les barres au milieu puis en soudant un rajout.</p><figure id="b7c7b622-3484-4a10-8dde-f7761c3fcbbb" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20211017_175617.jpg"><img style="width:336px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20211017_175617.jpg"/></a></figure><p id="3fa50b2d-7a7e-4a7f-b9cf-785123d829e4" class="">
+</p><p id="31192884-3491-4495-a9a3-788435d050da" class="">Ensuite j’ai dû réaliser la partie qui a été la plus compliquée de tout le projet : le cadre du haut.</p><figure id="6d74c276-e7c5-4602-874e-7b13286bd7b8" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20211023_160617.jpg"><img style="width:336px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20211023_160617.jpg"/></a></figure><p id="b4c2e6ff-f4fd-4a8f-804f-b13dbec6cb28" class="">
+</p><p id="1e4cea7a-8dbb-4b61-9e6a-9e7323679ee6" class="">J’ai utilisé des serre-joints avec une équerre pour avoir un angle de 90°.</p><figure id="4db91b37-a99b-406b-a3b2-d73f85b483fa" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/20211023_175936.jpg"><img style="width:336px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/20211023_175936.jpg"/></a></figure><p id="80bafb04-a7b8-48a2-a5ce-dc64d8b0c02d" class="">
+</p><p id="b556b62d-2a4a-4a20-97b4-c50d96045aad" class="">Une fois soudé, j’ai directement essayé de mettre le cadre en haut de l’armoire.</p><figure id="255f4a10-134a-4be8-b1c5-9483bfd41930" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20211023_182435.jpg"><img style="width:480px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20211023_182435.jpg"/></a></figure><p id="24f72dcf-3377-4654-a593-903649964a24" class="">À partir de ce point j’ai dû retravailler toutes mes soudures.</p><p id="005903a7-9c29-4857-bd4a-51b9aacb95b6" class="">J’ai ensuite soudé les parties longues, glisser l’armoire à l’intérieur puis j’ai fixé les barres du bas sur lequel sont soudé les pieds. </p><p id="73a457ca-856b-4863-bb20-5c4cba38ad7a" class="">Les pieds sont formés d’une équerre soudée à un écrou, le pied en lui-même et une vis avec une rondelle vissée dans l’écrou, cela m’a permis de faire un pied réglable en hauteur.</p><p id="910c32de-9550-47ae-8739-9b1f1f41649f" class="">
+</p><p id="a841c175-d77b-42d1-8d88-0eca90dcb9c6" class="">Je n’ai malheureusement pas pris de photos supplémentaires de cette étape, je vous laisse donc aller consulter le résultat final.</p></details></li></ul><ul id="ec52555b-8504-4de6-9165-e38e4374cd69" class="toggle"><li><details open=""><summary>Résultat Final</summary><p id="dc83492f-68d2-4d1f-ac5f-e77730edee17" class="">
+</p><p id="a653e79f-2a7d-4237-95ed-d1d8d00274c0" class="">
+</p><p id="0473c1e0-82be-42f4-8939-e2208e83c453" class="">J’ai commencé mon projet en partant des matériaux ci-dessous :</p><p id="21b8a36d-7a7e-470c-aa70-33847ccfcf47" class="">
+</p><div id="c5c07bdf-a7a2-4476-88ab-b68de2367ccf" class="column-list"><div id="8927d177-3687-48bb-a3bf-cb961821da5c" style="width:50.000000000000014%" class="column"><figure id="9008c66a-82d9-44b1-9b00-08af4c2ab99c" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/Untitled%203.png"><img style="width:288px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/Untitled%203.png"/></a></figure><figure id="2fcc1b8d-2dcb-4ee6-8a22-51ece35e297e" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20210923_183918.jpg"><img style="width:288px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20210923_183918.jpg"/></a></figure></div><div id="45624e09-6386-4e97-8e17-1182c876924a" style="width:49.99999999999999%" class="column"><figure id="883675f7-e3a5-4768-b958-2fb8175551b8" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/1675367220306%201.jpg"><img style="width:288px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/1675367220306%201.jpg"/></a></figure><figure id="acf6416f-c304-486b-8095-cedc7b6006c1" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/Untitled%201.png"><img style="width:432px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/Untitled%201.png"/></a></figure></div></div><p id="6460d0ca-7435-4b8b-bd7e-38e27cbfba80" class="">
+</p><p id="8476fb0a-d196-4b9e-a5f4-4faf7b4a7cef" class="">Et j’ai finalement obtenu ce rendu : </p><div id="8d57b558-ab23-4d1e-b877-1ff387476833" class="column-list"><div id="3efa39bd-d9ed-419b-b27b-3382e51a25d9" style="width:38.46153846153847%" class="column"><figure id="5e8b53ca-e1a6-44e4-b91c-3be067f1dcfe" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20211105_182837.jpg"><img style="width:288px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20211105_182837.jpg"/></a></figure></div><div id="3c260626-0b13-4859-be7a-de901120bb5e" style="width:34.61538461538461%" class="column"><figure id="e164c013-dbd0-406e-a43c-06581ba5037b" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20211105_182857.jpg"><img style="width:144px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20211105_182857.jpg"/></a></figure></div><div id="7082bb4b-9e9c-4941-a7a4-3b44188dc43c" style="width:26.923076923076923%" class="column"><figure id="90851f0a-7a42-4a41-95a8-df44701879f2" class="image"><a href="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20211105_182814.jpg"><img style="width:108px" src="Armoire%20Style%20Industriel%20392933f1da384387bed6145c33587ab2/IMG_20211105_182814.jpg"/></a></figure></div></div><p id="d3a96cdd-6044-4baa-b4ed-2a380f75eb4c" class="">
+</p><p id="0715d999-755e-4119-8916-1568b008c1c3" class="">J’ai réalisé avec soin chacune des étapes du projet, c’était la première fois que je réalisais une soudure à l’arc.</p><p id="00f1a3b1-7cf0-4a07-95a6-f034dcffd887" class="">Je suis personnellement très satisfait du résultat.</p><p id="59643d0b-160b-46e7-afb5-fed3644ee3fc" class="">Grâce à ce projet j’ai eu l’occasion de développer ma créativité mais aussi d’acquérir de nouvelles compétences (soudage, réalisation d’une maquette et d’un plan).  Je pense être amené à refaire ce genre de projet à l’avenir.</p></details></li></ul><p id="0716c28a-9fc5-4a0c-87ba-4444ba33ee82" class="">
+</p></div><div id="60ad924a-6fa4-43c5-bddf-b10753ca7622" style="width:6.25%" class="column"><p id="cdd7cead-6c06-47b4-84c9-46da276fbc7e" class="">
+</p></div></div><p id="3b5748b1-5892-439e-95c2-e30e49a04eee" class="">
+</p><p id="ddb3094d-4a63-40a7-b10a-8e1c9eccc92c" class="">
+</p><p id="63609eec-040e-4966-bcd4-1a8692b17b6b" class="">
+</p><p id="d36bb8b3-212b-448d-a248-f9ce8b36f47a" class="">
+</p></div></article></body></html>
