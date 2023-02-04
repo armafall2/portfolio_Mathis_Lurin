@@ -1,5 +1,7 @@
 button {
     font-size: large;
+    color: white;
+    background-color: black;
     position:sticky;
     top: 8px;
     z-index: 999;
@@ -7,22 +9,9 @@ button {
     border-radius: 10px;
 
 
+
   }
   button:hover{
     background-color:rgba(226, 75, 75, 1);
     color : white;
   }
-
-  @media only screen and (max-width: 768px)
-    {
-button{
-  font-size: xx-large;
-}
-    }
-
-    @media only screen and (max-width: 480px){
-      button{
-        font-size: xx-large;
-    }
-    
-    }
