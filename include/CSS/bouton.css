@@ -1,9 +1,10 @@
 button {
+    font-size: large;
     position:sticky;
     top: 8px;
     z-index: 999;
     border: 1px;
-    border-radius: 35px;
+    border-radius: 10px;
 
 
   }
