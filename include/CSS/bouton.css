@@ -2,9 +2,9 @@ button {
     position:sticky;
     top: 8px;
     z-index: 999;
-    border: 6px;
-    border-radius: 3px;
-    border-style: outset;
+    border: 1px;
+    border-radius: 35px;
+
 
   }
   button:hover{
