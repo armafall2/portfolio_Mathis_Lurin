@@ -1,6 +1,7 @@
 button {
     font-size: large;
     color: white;
+    font-family: Oswald;
     background-color: black;
     position:sticky;
     top: 8px;
