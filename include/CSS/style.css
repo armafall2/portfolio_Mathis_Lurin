@@ -172,8 +172,10 @@ body {
 }
 }
 #commitDisplay {
+  font-family: Oswald;
+  font-size: 18px;
   position: fixed;
   bottom: 0;
   right: 0;
-  font-family: Oswald;
+  
 }
