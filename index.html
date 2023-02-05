@@ -38,7 +38,7 @@
           let commit = commits[0];
           document.querySelector('#commitMessage').innerHTML = commit.commit.message;
           let date = new Date(commit.commit.committer.date);
-          document.querySelector('#commitDate').innerHTML = date.toLocaleDateString();
+          document.querySelector('#commitDate').innerHTML = date.toLocaleString();
         });
     </script>
 </body>
