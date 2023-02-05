@@ -171,3 +171,8 @@ body {
     width: 1440px ;
 }
 }
+#commitDisplay {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

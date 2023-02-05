@@ -30,6 +30,17 @@
             Bonne visite !
         </span>
     </div>
+    <p id="commitDisplay">Dernier commit : <span id="commitMessage"></span> (<span id="commitDate"></span>)</p>
+    <script>
+      fetch('https://api.github.com/repos/armafall2/portfolio_Mathis_Lurin/commits')
+        .then(response => response.json())
+        .then(commits => {
+          let commit = commits[0];
+          document.querySelector('#commitMessage').innerHTML = commit.commit.message;
+          let date = new Date(commit.commit.committer.date);
+          document.querySelector('#commitDate').innerHTML = date.toLocaleDateString();
+        });
+    </script>
 </body>
 
 </html> <br /><br />
